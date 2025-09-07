@@ -14,9 +14,9 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
-        <MoreTools />
-        <Techs />
-        <Price />
+        {/* <MoreTools /> */}
+        {/* <Techs /> */}
+        {/* <Price /> */}
         <FAQ />
       </main>
       <Footer />

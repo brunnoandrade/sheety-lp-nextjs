@@ -1,13 +1,26 @@
 export const siteConfig = {
-  name: "",
+  name: "Planilize",
   url: process.env.NEXT_PUBLIC_SITE_URL,
-  title: "",
-  description: "",
-  author: "",
+  title: "Planilize | Transforme suas planilhas em sistemas inteligentes",
+  description:
+    "O Planilize transforma suas planilhas em sistemas completos com dashboards, relatórios e automações. Deixe o Excel de lado e crie insights em minutos, sem precisar programar.",
+  author: "Planilize",
   metadataBase:
     process.env.NEXT_PUBLIC_SITE_URL &&
     new URL(process.env.NEXT_PUBLIC_SITE_URL),
-  keywords: [],
+  keywords: [
+    "planilhas",
+    "sistemas",
+    "dashboard",
+    "relatórios automáticos",
+    "business intelligence",
+    "no-code",
+    "Excel",
+    "Google Sheets",
+    "gestão de dados",
+    "automação de planilhas",
+    "Planilize",
+  ],
   icons: {
     icon: [
       {
@@ -17,27 +30,29 @@ export const siteConfig = {
     ],
   },
   openGraph: {
-    title: "",
-    description: "",
+    title: "Planilize | Transforme suas planilhas em sistemas inteligentes",
+    description:
+      "Converta planilhas em dashboards e relatórios automáticos. O Planilize é a forma mais rápida e simples de dar vida aos seus dados.",
     url: process.env.NEXT_PUBLIC_SITE_URL,
-    siteName: "",
+    siteName: "Planilize",
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "",
+        alt: "Planilize - Transforme suas planilhas em sistemas inteligentes",
       },
     ],
-    locale: "en_US",
+    locale: "pt_BR",
     type: "website" as const,
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "",
-    description: "",
+    title: "Planilize | Transforme suas planilhas em sistemas inteligentes",
+    description:
+      "Do Excel ao dashboard em segundos. Gere relatórios, gráficos e insights automáticos com o Planilize.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`],
-    creator: "@",
+    creator: "@planilize",
   },
 };
 
