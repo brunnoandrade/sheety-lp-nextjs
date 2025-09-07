@@ -18,10 +18,10 @@ export default function Price() {
                   CreateLPImport Monthly License
                 </h3>
               </div>
-              <div className="order-first text-2xl font-medium">
+              <div className="order-first text-2xl font-medium text-black">
                 $10 <span>/month</span>
               </div>
-              <p className="mt-2 text-xs italic">
+              <p className="mt-2 text-xs italic text-black">
                 Excluding local taxes or VAT if applicable.
               </p>
               <ul className="flex flex-col gap-2 mt-12 text-sm text-gray-600">
@@ -298,11 +298,11 @@ export default function Price() {
           <div className="flex flex-col justify-between h-full p-8 bg-gray-50 rounded-3xl">
             <div className="flex flex-col">
               <div>
-                <h3 className="mt-4 font-medium">
+                <h3 className="mt-4 font-medium text-black">
                   CreateLPImport Perpetual License
                 </h3>
               </div>
-              <div className="order-first text-2xl font-medium">
+              <div className="order-first text-2xl font-medium text-black">
                 $199 <span>/one-time</span>
               </div>
               <p className="mt-2 text-xs italic text-gray-600">
