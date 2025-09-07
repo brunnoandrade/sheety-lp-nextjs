@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden max-h-[900px] bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-white">
-        <h1 className="text-center text-5xl font-semibold tracking-tighter text-green-50">
+        <h1 className="text-center text-5xl font-semibold tracking-tighter text-green-50 max-w-lg">
           Transforme suas planilhas em sistemas inteligentes.
         </h1>
 
