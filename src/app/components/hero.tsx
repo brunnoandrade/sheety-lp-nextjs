@@ -22,8 +22,8 @@ export default function Hero() {
           <input
             name="email"
             type="email"
-            placeholder="Seu melhor email"
-            className="rounded-xl border border-green-700 bg-green-900/30 px-4 py-2 text-white placeholder-green-400 focus:outline-none"
+            placeholder="Seu melhor e-mail"
+            className="rounded-xl border border-[#a2f25c] bg-green-900/30 px-4 py-2 text-green-100/90 placeholder-green-100/90 focus:outline-none"
             required
             autoComplete="email"
           />
@@ -34,7 +34,7 @@ export default function Hero() {
           />
         </form>
 
-        <small className="px-2 text-center text-xs text-green-400/70">
+        <small className="px-2 text-center text-xs text-green-100/70">
           Ao se inscrever, você terá acesso antecipado e ajudará a moldar o
           futuro da plataforma. 🚀
         </small>
