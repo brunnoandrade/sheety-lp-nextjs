@@ -8,33 +8,50 @@ export default function Hero() {
           Transforme suas planilhas em sistemas inteligentes.
         </h1>
 
-        <strong className="text-center text-xl font-normal text-green-100/90">
-          Do Excel ao dashboard em segundos.
-          <br /> Relatórios, gráficos e automações sem código.
+        <strong className="text-center text-xl font-normal text-green-100/90 max-w-lg mx-auto">
+          Do Excel ao dashboard em segundos. Relatórios, gráficos e automações
+          sem código.
         </strong>
 
         <form
           action="index.php"
           method="post"
-          className="flex items-center gap-4"
+          className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md"
           aria-label="Entre na lista de espera"
         >
-          <input
-            name="email"
-            type="email"
-            placeholder="Seu melhor e-mail"
-            className="rounded-xl border border-[#a2f25c] bg-green-900/30 px-4 py-2 text-green-100/90 placeholder-green-100/90 focus:outline-none"
-            required
-            autoComplete="email"
-          />
+          <div className="relative w-full">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg
+                className="w-5 h-5 text-green-100/90"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <input
+              name="email"
+              type="email"
+              placeholder="Seu melhor e-mail"
+              className="w-full pl-10 rounded-xl border border-[#a2f25c] bg-green-900/30 px-4 py-2 text-green-100/90 placeholder-green-100/90 focus:outline-none"
+              required
+              autoComplete="email"
+            />
+          </div>
           <input
             type="submit"
-            className="cursor-pointer rounded-xl bg-[#a2f25c] px-4 py-2 text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors"
+            className="w-full sm:w-auto cursor-pointer rounded-xl bg-[#a2f25c] px-4 py-2 text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors"
             value="Entrar na lista VIP"
           />
         </form>
 
-        <small className="px-2 text-center text-xs text-green-100/70">
+        <small className="px-2 text-center text-xs text-green-100/70 max-w-md">
           Ao se inscrever, você terá acesso antecipado e ajudará a moldar o
           futuro da plataforma. 🚀
         </small>
