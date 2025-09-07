@@ -15,7 +15,7 @@ export default function Price() {
             <div className="flex flex-col">
               <div>
                 <h3 className="mt-4 font-medium text-gray-900">
-                  CreateLPImport Monthly License
+                  Planilize Monthly License
                 </h3>
               </div>
               <div className="order-first text-2xl font-medium text-black">
@@ -47,7 +47,7 @@ export default function Price() {
                       ></path>
                     </svg>
                   </div>
-                  <p>Boost your productivity with CreateLPImport</p>
+                  <p>Boost your productivity with Planilize</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0">
@@ -119,7 +119,7 @@ export default function Price() {
                       ></path>
                     </svg>
                   </div>
-                  <p>Permanent access to the CreateLPImport community</p>
+                  <p>Permanent access to the Planilize community</p>
                 </li>
               </ul>
             </div>
@@ -132,9 +132,7 @@ export default function Price() {
           <div className="flex flex-col text-black justify-between h-full p-8 bg-[#cff245] rounded-3xl">
             <div className="flex flex-col">
               <div>
-                <h3 className="mt-4 font-medium">
-                  CreateLPImport Yearly License
-                </h3>
+                <h3 className="mt-4 font-medium">Planilize Yearly License</h3>
               </div>
               <div className="order-first text-2xl font-medium">
                 $80 <span>/year</span>
@@ -189,7 +187,7 @@ export default function Price() {
                       ></path>
                     </svg>
                   </div>
-                  <p>Boost your productivity with CreateLPImport</p>
+                  <p>Boost your productivity with Planilize</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0">
@@ -261,7 +259,7 @@ export default function Price() {
                       ></path>
                     </svg>
                   </div>
-                  <p>Permanent access to the CreateLPImport community</p>
+                  <p>Permanent access to the Planilize community</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0">
@@ -299,7 +297,7 @@ export default function Price() {
             <div className="flex flex-col">
               <div>
                 <h3 className="mt-4 font-medium text-black">
-                  CreateLPImport Perpetual License
+                  Planilize Perpetual License
                 </h3>
               </div>
               <div className="order-first text-2xl font-medium text-black">
@@ -355,7 +353,7 @@ export default function Price() {
                       ></path>
                     </svg>
                   </div>
-                  <p>Boost your productivity with CreateLPImport</p>
+                  <p>Boost your productivity with Planilize</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0">
@@ -427,7 +425,7 @@ export default function Price() {
                       ></path>
                     </svg>
                   </div>
-                  <p>Permanent access to the CreateLPImport community</p>
+                  <p>Permanent access to the Planilize community</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0">

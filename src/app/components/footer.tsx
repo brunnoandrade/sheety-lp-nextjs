@@ -1,25 +1,28 @@
 export default function Footer() {
   return (
-    <footer className="px-8 py-20 flex flex-col gap-12">
+    <footer className="px-8 py-20 bg-[#0a0f0b] border-t border-green-800/30">
       <div className="mx-auto max-w-5xl">
-        <div>
-          <div className="text-white">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="text-white mb-8 md:mb-0">
             <div className="inline-flex items-center gap-3">
-              <p className="text-2xl font-bold uppercase">CreateLPImport</p>
+              <p className="text-2xl font-bold uppercase text-[#a2f25c]">
+                Planilize
+              </p>
             </div>
-            <p className="mt-2 text-sm text-gray-400">
-              Feito com ❤️ para transformar suas planilhas em sistemas
-              inteligentes.
+            <p className="mt-2 text-sm text-green-100/90 max-w-xs">
+              Feito para transformar suas planilhas em sistemas inteligentes.
             </p>
           </div>
-        </div>
-        <div className="flex flex-col pt-12 md:flex-row md:items-center md:justify-between">
-          <p className="text-left">
-            <span className="mx-auto mt-2 text-xs text-gray-500 lg:mx-0">
+
+          <div className="text-right">
+            <p className="text-xs text-green-100/70 mb-2">
               © {new Date().getFullYear()} Planilize. Todos os direitos
               reservados.
-            </span>
-          </p>
+            </p>
+            <p className="text-xs text-green-100/70">
+              Desenvolvido com 💚 para revolucionar planilhas.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

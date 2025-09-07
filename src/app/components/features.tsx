@@ -1,8 +1,8 @@
 export default function Features() {
   return (
-    <section id="features" className="px-8 py-20 bg-[#f6f7fa] rounded-3xl">
+    <section id="features" className="px-8 py-20 bg-[#f6f7fa] rounded-t-3xl">
       <div className="flex flex-col gap-16 items-center mx-auto w-full max-w-5xl">
-        <h2 className="text-5xl font-semibold tracking-tighter text-center text-black">
+        <h2 className="text-5xl font-semibold tracking-tighter text-center text-green-900">
           Do Excel ao Dashboard
           <br />
           em um clique
@@ -14,31 +14,31 @@ export default function Features() {
               className="max-w-[300px] mx-auto mb-6"
               alt=""
             />
-            <h3 className="text-xl font-bold text-black">
+            <h3 className="text-xl font-bold text-green-900">
               Construtor automático de dashboards
             </h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-green-800">
               Transforme sua planilha em relatórios e gráficos interativos sem
               precisar mexer em fórmulas complicadas.
             </p>
             <a
               href=""
-              className="bg-[#cff245] px-4 py-2 text-black rounded-xl mr-auto"
+              className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl mr-auto"
             >
               Receber acesso antecipado
             </a>
           </div>
           <div className="col-span-1 min-h-[500px] flex flex-col gap-4 items-left bg-white rounded-3xl p-8 relative overflow-hidden">
-            <h3 className="text-xl font-bold text-black">
+            <h3 className="text-xl font-bold text-green-900">
               Integração instantânea com planilhas
             </h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-green-800">
               Conecte seu Excel ou Google Sheets e veja os dados ganharem vida
               em um sistema pronto para usar.
             </p>
             <a
               href=""
-              className="bg-[#cff245] px-4 py-2 text-black rounded-xl mr-auto"
+              className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl mr-auto"
             >
               Receber acesso antecipado
             </a>
@@ -56,15 +56,18 @@ export default function Features() {
               className="max-w-[70%] mx-auto mb-6"
               alt=""
             />
-            <h3 className="text-xl font-bold text-black">
+            <h3 className="text-xl font-bold text-green-900">
               De planilhas confusas a sistemas inteligentes
             </h3>
-            <p className="text-md text-gray-600 text-center">
+            <p className="text-md text-green-800 text-center">
               Transforme seus arquivos em um painel completo, com relatórios,
               gráficos e automações. Mais agilidade, menos retrabalho - e
               decisões muito mais rápidas.
             </p>
-            <a href="" className="bg-[#cff245] px-4 py-2 text-black rounded-xl">
+            <a
+              href=""
+              className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl"
+            >
               Receber acesso antecipado
             </a>
           </div>
