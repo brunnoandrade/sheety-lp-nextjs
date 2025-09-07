@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden max-h-[900px] bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-40 pb-20">
+    <section className="relative overflow-hidden max-h-[900px] bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-white">
         <h1 className="text-center text-5xl font-semibold tracking-tighter text-green-50">
           Transforme suas planilhas em sistemas inteligentes.
@@ -56,7 +56,7 @@ export default function Hero() {
           futuro da plataforma. 🚀
         </small>
 
-        <div className="mt-20 w-full">
+        <div className="w-full mt-5 md:mt-20">
           <img
             src="./images/hero.png"
             className="mx-auto w-full max-w-[1000px] rounded-lg shadow-2xl shadow-green-900/20 border border-green-800/30"
