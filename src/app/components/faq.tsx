@@ -1,6 +1,6 @@
 export default function FAQ() {
   return (
-    <section className="py-20 bg-[#f6f7fa] rounded-3xl">
+    <section id="faq" className="py-20 bg-[#f6f7fa] rounded-3xl">
       <div className="h-full max-w-5xl mx-auto">
         <div className="flex flex-col gap-12">
           <div>

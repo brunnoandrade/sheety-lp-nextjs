@@ -1,6 +1,6 @@
 export default function Price() {
   return (
-    <section className="px-8 py-20">
+    <section id="pricing" className="px-8 py-20">
       <div className="h-full mx-auto max-w-5xl">
         <div className="mx-auto max-w-7xl px-4l lg:text-center sm:px-6 lg:px-8 pb-10">
           <div className="max-w-3xl mx-auto lg:max-w-none">
@@ -10,7 +10,7 @@ export default function Price() {
             </h2>
           </div>
         </div>
-        <div className="items-start gap-2 mx-auto items-center mt-12 flex flex-col lg:grid lg:grid-cols-3">
+        <div className="items-start gap-2 mx-auto mt-12 flex flex-col lg:grid lg:grid-cols-3">
           <div className="flex flex-col justify-between h-full p-8 bg-gray-50 rounded-3xl">
             <div className="flex flex-col">
               <div>
