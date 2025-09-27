@@ -39,7 +39,7 @@ export default function Header() {
     >
       <div className="flex items-center text-white justify-between mx-auto w-full max-w-7xl">
         <Link href="/" className="flex items-center gap-2 z-10">
-          <b className="bi bi-send-fill text-xl text-[#a2f25c]">Planilize</b>{" "}
+          <b className="bi bi-send-fill text-xl text-[#a2f25c]">Sheety</b>{" "}
         </Link>
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex text-sm gap-8">

@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="text-white mb-8 md:mb-0 text-center md:text-left">
             <div className="inline-flex items-center gap-3">
               <p className="text-2xl font-bold uppercase text-[#a2f25c]">
-                Planilize
+                Sheety
               </p>
             </div>
             <p className="mt-2 text-sm text-green-100/90 max-w-xs mx-auto md:mx-0">
@@ -16,7 +16,7 @@ export default function Footer() {
 
           <div className="text-center md:text-right">
             <p className="text-xs text-green-100/70 mb-2">
-              © {new Date().getFullYear()} Planilize. Todos os direitos
+              © {new Date().getFullYear()} Sheety. Todos os direitos
               reservados.
             </p>
             <p className="text-xs text-green-100/70">
