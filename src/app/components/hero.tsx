@@ -57,14 +57,21 @@ export default function Hero() {
         </small>
 
         <div className="w-full mt-5 md:mt-20">
-          <img
-            src="./images/hero.png"
+          <video
+            src="./videos/hero.mp4"
             className="mx-auto w-full max-w-[1000px] rounded-lg shadow-2xl shadow-green-900/20 border border-green-800/30"
-            alt="Product hero"
-            loading="eager"
-            decoding="async"
-          />
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            controls={false}
+            poster="./images/hero.png" // opcional, thumbnail inicial
+          >
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
         </div>
+
       </div>
     </section>
   );
