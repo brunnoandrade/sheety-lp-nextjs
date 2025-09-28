@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { Dialog } from "@headlessui/react";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className="relative overflow-hidden max-h-[900px] bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
+      <div className="absolute top-30 left-10 w-46 h-46 rounded-full bg-green-400/10 blur-2xl" />
+      <div className="absolute top-80 left-1/3 w-16 h-16 rounded-full bg-green-500/10 blur-lg" />
+      <div className="absolute top-40 right-20 w-32 h-32 rounded-full bg-green-300/10 blur-2xl" />
+
+      <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-white">
         <h1 className="text-center text-5xl font-semibold tracking-tighter text-green-50 max-w-lg">
           Transforme suas planilhas em sistemas inteligentes.
         </h1>
@@ -56,23 +65,56 @@ export default function Hero() {
           futuro da plataforma. 🚀
         </small>
 
-        <div className="w-full mt-5 md:mt-20">
-          <video
-            src="./videos/hero.mp4"
-            className="mx-auto w-full max-w-[1000px] rounded-lg shadow-2xl shadow-green-900/20 border border-green-800/30"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            controls={false}
-            poster="./images/hero.png" // opcional, thumbnail inicial
-          >
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
+        <div className="w-full mt-5 md:mt-20 pb-10">
+          <div className="relative mx-auto w-full h-auto max-w-[1000px]">
+            <video
+              src="./videos/hero.mp4"
+              className="w-full h-auto rounded-lg shadow-2xl shadow-green-900/20 cursor-grab"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              controls={false}
+              poster="./images/hero.png"
+            >
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
 
+            <button
+              onClick={() => setIsOpen(true)}
+              className="
+                absolute inset-0 flex items-center justify-center
+                bg-black/30
+                opacity-100 md:opacity-0 md:hover:opacity-100
+                transition-opacity cursor-pointer
+              "
+            >
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#a2f25c] px-4 py-2 text-sm md:px-6 md:py-3 md:text-base text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors">
+                ▶ Assistir demonstração
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
+
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        className="relative z-50"
+      >
+        <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
+        <div className="fixed inset-0 flex items-center justify-center p-4">
+          <Dialog.Panel className="w-full max-w-4xl rounded-xl overflow-hidden bg-black">
+            <video
+              src="./videos/hero.mp4"
+              className="w-full h-auto"
+              controls
+              autoPlay
+            />
+          </Dialog.Panel>
+        </div>
+      </Dialog>
     </section>
   );
 }
