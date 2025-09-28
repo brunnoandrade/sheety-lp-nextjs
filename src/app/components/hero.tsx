@@ -8,9 +8,9 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
-      <div className="absolute top-30 left-10 w-46 h-46 rounded-full bg-green-400/10 blur-2xl" />
-      <div className="absolute top-80 left-1/3 w-16 h-16 rounded-full bg-green-500/10 blur-lg" />
-      <div className="absolute top-40 right-20 w-32 h-32 rounded-full bg-green-300/10 blur-2xl" />
+      <div className="absolute top-30 left-10 w-46 h-46 rounded-full bg-green-800/10 blur-2xl" />
+      <div className="absolute top-80 left-1/3 w-16 h-16 rounded-full bg-green-800/10 blur-lg" />
+      <div className="absolute top-40 right-20 w-32 h-32 rounded-full bg-green-800/10 blur-2xl" />
 
       <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-white">
         <h1 className="text-center text-5xl font-semibold tracking-tighter text-green-50 max-w-lg">
@@ -69,7 +69,7 @@ export default function Hero() {
           <div className="relative mx-auto w-full h-auto max-w-[1000px]">
             <video
               src="./videos/hero.mp4"
-              className="w-full h-auto rounded-lg shadow-2xl shadow-green-900/20 cursor-grab"
+              className="w-full h-auto rounded-lg cursor-grab shadow-[0_0_25px_5px_rgba(34,197,94,0.3)]"
               autoPlay
               muted
               loop
