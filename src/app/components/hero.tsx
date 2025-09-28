@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
+import { Play } from "lucide-react";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,15 +84,11 @@ export default function Hero() {
 
             <button
               onClick={() => setIsOpen(true)}
-              className="
-                absolute inset-0 flex items-center justify-center
-                bg-black/30
-                opacity-100 md:opacity-0 md:hover:opacity-100
-                transition-opacity cursor-pointer
-              "
+              className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 md:opacity-0 md:hover:opacity-100 transition-opacity cursor-pointer"
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-[#a2f25c] px-4 py-2 text-sm md:px-6 md:py-3 md:text-base text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors">
-                ▶ Assistir demonstração
+                <Play className="w-4 h-4 md:w-4 md:h-4" />
+                Assistir demonstração
               </span>
             </button>
           </div>
