@@ -3,12 +3,14 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Play } from "lucide-react";
+import { useAnalytics } from "@/components/analytics";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
   const [typeformOpen, setTypeformOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [typeformUrl, setTypeformUrl] = useState("");
+  const { trackSignUp, trackFormOpen, trackFormClose, trackDemoVideoPlay, trackDemoVideoClose } = useAnalytics();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,12 +18,16 @@ export default function Hero() {
     // Valida o email
     if (!email) return;
 
+    // Rastreia a inscrição do usuário
+    trackSignUp(email);
+
     // Constrói a URL do Typeform com o email como parâmetro
     const url = `https://form.typeform.com/to/r6aUjesb?email=${encodeURIComponent(email)}`;
     setTypeformUrl(url);
 
     // Abre o Typeform em um modal na mesma página
     setTypeformOpen(true);
+    trackFormOpen();
   };
 
   return (
@@ -101,7 +107,10 @@ export default function Hero() {
             </video>
 
             <button
-              onClick={() => setIsOpen(true)}
+              onClick={() => {
+                setIsOpen(true);
+                trackDemoVideoPlay();
+              }}
               className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 md:opacity-0 md:hover:opacity-100 transition-opacity cursor-pointer"
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-[#a2f25c] px-4 py-2 text-sm md:px-6 md:py-3 md:text-base text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors">
@@ -116,7 +125,10 @@ export default function Hero() {
       {/* Modal para o vídeo de demonstração */}
       <Dialog
         open={isOpen}
-        onClose={() => setIsOpen(false)}
+        onClose={() => {
+          setIsOpen(false);
+          trackDemoVideoClose();
+        }}
         className="relative z-50"
       >
         <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
@@ -135,7 +147,10 @@ export default function Hero() {
       {/* Modal para o Typeform */}
       <Dialog
         open={typeformOpen}
-        onClose={() => setTypeformOpen(false)}
+        onClose={() => {
+          setTypeformOpen(false);
+          trackFormClose(false);
+        }}
         className="relative z-50"
       >
         <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
@@ -143,7 +158,10 @@ export default function Hero() {
           <Dialog.Panel className="w-full h-full max-w-4xl max-h-[90vh] rounded-xl overflow-hidden bg-white">
             <div className="relative w-full h-full">
               <button
-                onClick={() => setTypeformOpen(false)}
+                onClick={() => {
+                  setTypeformOpen(false);
+                  trackFormClose(true);
+                }}
                 className="absolute top-4 right-4 z-10 bg-[#a2f25c] rounded-full p-2 text-[#0a0f0b] hover:bg-[#b5f57a]"
                 aria-label="Fechar formulário"
               >
