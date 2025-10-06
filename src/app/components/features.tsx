@@ -14,7 +14,7 @@ export default function Features() {
           <div className="col-span-1 flex flex-col gap-4 items-left bg-white rounded-3xl px-8 pb-8">
             <Image
               src="/images/feat1.png"
-              className="max-w-[450px] mx-auto mb-6 mt-4"
+              className="max-w-[250px] sm:max-w-[450px] mx-auto mb-6 mt-4"
               alt=""
               width={450}
               height={200}
