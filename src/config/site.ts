@@ -22,11 +22,11 @@ export const siteConfig = {
     "Sheety",
   ],
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon-16x16.png",
+    apple: "/favicon/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/favicon/site.webmanifest",
   openGraph: {
     title: "Sheety | Transforme suas planilhas em sistemas inteligentes",
     description:

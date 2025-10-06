@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Features() {
   return (
     <section id="features" className="px-8 py-20 bg-[#f6f7fa] rounded-t-3xl">
@@ -9,10 +11,12 @@ export default function Features() {
         </h2>
         <div className="flex flex-col md:grid grid-cols-2 gap-4">
           <div className="col-span-1 flex flex-col gap-4 items-left bg-white rounded-3xl px-8 pb-8">
-            <img
-              src="./images/picture-green5.png"
-              className="max-w-[300px] mx-auto mb-6"
+            <Image
+              src="/images/feat1.png"
+              className="max-w-[450px] mx-auto mb-6 mt-4"
               alt=""
+              width={450}
+              height={200}
             />
             <h3 className="text-xl font-bold text-green-900">
               Construtor automático de dashboards
@@ -29,6 +33,13 @@ export default function Features() {
             </a>
           </div>
           <div className="col-span-1 min-h-[500px] flex flex-col gap-4 items-left bg-white rounded-3xl p-8 relative overflow-hidden">
+            <Image
+              src="/images/feat3.png"
+              className="max-w-[90%] mx-auto mb-6"
+              alt=""
+              width={450}
+              height={200}
+            />
             <h3 className="text-xl font-bold text-green-900">
               Integração instantânea com planilhas
             </h3>
@@ -43,18 +54,16 @@ export default function Features() {
               Receber acesso antecipado
             </a>
             <div className="absolute w-full left-0 bottom-0 flex">
-              <img
-                src="./images/picture-green7.png"
-                className="max-w-[70%] mx-auto mb-6"
-                alt=""
-              />
+
             </div>
           </div>
           <div className="col-span-2 flex flex-col gap-4 items-center bg-white rounded-3xl p-10 md:p-20">
-            <img
-              src="./images/illustration-green2.png"
-              className="max-w-[70%] mx-auto mb-6"
+            <Image
+              src="/images/feat2.png"
+              className="max-w-[90%] mx-auto mb-6"
               alt=""
+              width={650}
+              height={450}
             />
             <h3 className="text-xl font-bold text-green-900">
               De planilhas confusas a sistemas inteligentes
