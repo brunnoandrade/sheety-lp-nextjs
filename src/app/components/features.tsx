@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollLink } from "react-scroll";
 
 export default function Features() {
   return (
@@ -26,7 +27,7 @@ export default function Features() {
               precisar mexer em fórmulas complicadas.
             </p>
             <a
-              href=""
+              href="#hero"
               className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl mr-auto"
             >
               Receber acesso antecipado
@@ -48,7 +49,7 @@ export default function Features() {
               em um sistema pronto para usar.
             </p>
             <a
-              href=""
+              href="#hero"
               className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl mr-auto"
             >
               Receber acesso antecipado
@@ -74,7 +75,7 @@ export default function Features() {
               decisões muito mais rápidas.
             </p>
             <a
-              href=""
+              href="#hero"
               className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl"
             >
               Receber acesso antecipado

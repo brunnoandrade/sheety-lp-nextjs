@@ -6,9 +6,26 @@ import { Play } from "lucide-react";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
+  const [typeformOpen, setTypeformOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [typeformUrl, setTypeformUrl] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Valida o email
+    if (!email) return;
+
+    // Constrói a URL do Typeform com o email como parâmetro
+    const url = `https://form.typeform.com/to/r6aUjesb?email=${encodeURIComponent(email)}`;
+    setTypeformUrl(url);
+
+    // Abre o Typeform em um modal na mesma página
+    setTypeformOpen(true);
+  };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
+    <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
       <div className="absolute top-30 left-10 w-46 h-46 rounded-full bg-green-800/10 blur-2xl" />
       <div className="absolute top-80 left-1/3 w-16 h-16 rounded-full bg-green-800/10 blur-lg" />
       <div className="absolute top-40 right-20 w-32 h-32 rounded-full bg-green-800/10 blur-2xl" />
@@ -24,12 +41,11 @@ export default function Hero() {
         </strong>
 
         <form
-          action="index.php"
-          method="post"
-          className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md"
+          onSubmit={handleSubmit}
+          className="flex flex-row items-center gap-4 w-full max-w-md"
           aria-label="Entre na lista de espera"
         >
-          <div className="relative w-full">
+          <div className="relative flex-1">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg
                 className="w-5 h-5 text-green-100/90"
@@ -46,19 +62,21 @@ export default function Hero() {
               </svg>
             </div>
             <input
-              name="email"
               type="email"
               placeholder="Seu melhor e-mail"
               className="w-full pl-10 rounded-xl border border-[#a2f25c] bg-green-900/30 px-4 py-2 text-green-100/90 placeholder-green-100/90 focus:outline-none"
               required
               autoComplete="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <input
+          <button
             type="submit"
-            className="w-full sm:w-auto cursor-pointer rounded-xl bg-[#a2f25c] px-4 py-2 text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors"
-            value="Entrar na lista VIP"
-          />
+            className="shrink-0 cursor-pointer rounded-xl bg-[#a2f25c] px-4 py-2 text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors"
+          >
+            Entrar na lista VIP
+          </button>
         </form>
 
         <small className="px-2 text-center text-xs text-green-100/70 max-w-md">
@@ -95,6 +113,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Modal para o vídeo de demonstração */}
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
@@ -109,6 +128,38 @@ export default function Hero() {
               controls
               autoPlay
             />
+          </Dialog.Panel>
+        </div>
+      </Dialog>
+
+      {/* Modal para o Typeform */}
+      <Dialog
+        open={typeformOpen}
+        onClose={() => setTypeformOpen(false)}
+        className="relative z-50"
+      >
+        <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
+        <div className="fixed inset-0 flex items-center justify-center p-4">
+          <Dialog.Panel className="w-full h-full max-w-4xl max-h-[90vh] rounded-xl overflow-hidden bg-white">
+            <div className="relative w-full h-full">
+              <button
+                onClick={() => setTypeformOpen(false)}
+                className="absolute top-4 right-4 z-10 bg-[#a2f25c] rounded-full p-2 text-[#0a0f0b] hover:bg-[#b5f57a]"
+                aria-label="Fechar formulário"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              <iframe
+                src={typeformUrl}
+                style={{ border: "none" }}
+                width="100%"
+                height="100%"
+                title="Formulário de inscrição"
+              />
+            </div>
           </Dialog.Panel>
         </div>
       </Dialog>

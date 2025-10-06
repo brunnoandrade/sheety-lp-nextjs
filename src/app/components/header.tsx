@@ -33,9 +33,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 px-8 py-4 bg-[#0a0f0b] border-b border-green-800/30 transition-all duration-300 ${
-        isScrolled ? "shadow-lg shadow-green-900/10" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 px-8 py-4 bg-[#0a0f0b] border-b border-green-800/30 transition-all duration-300 ${isScrolled ? "shadow-lg shadow-green-900/10" : ""
+        }`}
     >
       <div className="flex items-center text-white justify-between mx-auto w-full max-w-7xl">
         <Link href="/" className="flex items-center gap-2 z-10">
@@ -60,7 +59,7 @@ export default function Header() {
         </nav>
 
         <ScrollLink
-          to="contact"
+          to="hero"
           smooth={true}
           duration={800}
           offset={-70}
