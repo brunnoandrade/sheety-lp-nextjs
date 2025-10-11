@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Play } from "lucide-react";
-import { useAnalytics } from "@/components/analytics";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
