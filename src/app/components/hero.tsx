@@ -12,22 +12,41 @@ export default function Hero() {
   const [typeformUrl, setTypeformUrl] = useState("");
   const { trackSignUp, trackFormOpen, trackFormClose, trackDemoVideoPlay, trackDemoVideoClose } = useAnalytics();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Valida o email
     if (!email) return;
 
-    // Rastreia a inscrição do usuário
-    trackSignUp(email);
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
-    // Constrói a URL do Typeform com o email como parâmetro
-    const url = `https://form.typeform.com/to/r6aUjesb?email=${encodeURIComponent(email)}`;
-    setTypeformUrl(url);
+      const data = await response.json();
 
-    // Abre o Typeform em um modal na mesma página
-    setTypeformOpen(true);
-    trackFormOpen();
+      if (!response.ok) {
+        console.error('Erro ao salvar email:', data.error);
+        return;
+      }
+
+      // Rastreia a inscrição do usuário
+      trackSignUp(email);
+
+      // Constrói a URL do Typeform com o email como parâmetro
+      const url = `https://form.typeform.com/to/r6aUjesb?email=${encodeURIComponent(email)}`;
+      setTypeformUrl(url);
+
+      // Abre o Typeform em um modal na mesma página
+      setTypeformOpen(true);
+      trackFormOpen();
+    } catch (error) {
+      console.error('Erro ao enviar o email:', error);
+    }
   };
 
   return (
