@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ScrollLink } from "react-scroll";
 
 export default function Features() {
   return (
@@ -54,9 +53,7 @@ export default function Features() {
             >
               Receber acesso antecipado
             </a>
-            <div className="absolute w-full left-0 bottom-0 flex">
-
-            </div>
+            <div className="absolute w-full left-0 bottom-0 flex"></div>
           </div>
           <div className="col-span-2 flex flex-col gap-4 items-center bg-white rounded-3xl p-10 md:p-20">
             <Image

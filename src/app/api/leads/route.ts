@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error saving lead:", error);
     return NextResponse.json(
       { error: "Internal server error" },
