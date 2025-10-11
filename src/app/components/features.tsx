@@ -55,7 +55,7 @@ export default function Features() {
             </a>
             <div className="absolute w-full left-0 bottom-0 flex"></div>
           </div>
-          <div className="col-span-2 flex flex-col gap-4 items-center bg-white rounded-3xl p-10 md:p-20">
+          <div className="col-span-2 flex flex-col gap-4 items-start md:items-center bg-white rounded-3xl p-10 md:p-20">
             <Image
               src="/images/feat2.png"
               className="max-w-[90%] mx-auto mb-6"
@@ -63,17 +63,17 @@ export default function Features() {
               width={650}
               height={450}
             />
-            <h3 className="text-xl font-bold text-green-900">
+            <h3 className="text-xl font-bold text-green-900 text-left md:text-center">
               De planilhas confusas a sistemas inteligentes
             </h3>
-            <p className="text-md text-green-800 text-center">
+            <p className="text-md text-green-800 text-left md:text-center">
               Transforme seus arquivos em um painel completo, com relatórios,
-              gráficos e automações. Mais agilidade, menos retrabalho - e
+              gráficos e automações. Mais agilidade, menos retrabalho — e
               decisões muito mais rápidas.
             </p>
             <a
               href="#hero"
-              className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl"
+              className="bg-[#cff245] px-4 py-2 text-green-900 rounded-xl text-left md:text-center"
             >
               Receber acesso antecipado
             </a>

@@ -10,7 +10,13 @@ export default function Hero() {
   const [typeformOpen, setTypeformOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [typeformUrl, setTypeformUrl] = useState("");
-  const { trackSignUp, trackFormOpen, trackFormClose, trackDemoVideoPlay, trackDemoVideoClose } = useAnalytics();
+  const {
+    trackSignUp,
+    trackFormOpen,
+    trackFormClose,
+    trackDemoVideoPlay,
+    trackDemoVideoClose,
+  } = useAnalytics();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,10 +25,10 @@ export default function Hero() {
     if (!email) return;
 
     try {
-      const response = await fetch('/api/leads', {
-        method: 'POST',
+      const response = await fetch("/api/leads", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email }),
       });
@@ -30,7 +36,7 @@ export default function Hero() {
       const data = await response.json();
 
       if (!response.ok) {
-        console.error('Erro ao salvar email:', data.error);
+        console.error("Erro ao salvar email:", data.error);
         return;
       }
 
@@ -38,19 +44,24 @@ export default function Hero() {
       trackSignUp(email);
 
       // Constrói a URL do Typeform com o email como parâmetro
-      const url = `https://form.typeform.com/to/r6aUjesb?email=${encodeURIComponent(email)}`;
+      const url = `https://form.typeform.com/to/r6aUjesb?email=${encodeURIComponent(
+        email
+      )}`;
       setTypeformUrl(url);
 
       // Abre o Typeform em um modal na mesma página
       setTypeformOpen(true);
       trackFormOpen();
     } catch (error) {
-      console.error('Erro ao enviar o email:', error);
+      console.error("Erro ao enviar o email:", error);
     }
   };
 
   return (
-    <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40">
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-gradient-to-b from-[#0a0f0b] to-[#0f1a12] px-8 pt-25 md:pt-40"
+    >
       <div className="absolute top-30 left-10 w-46 h-46 rounded-full bg-green-800/10 blur-2xl" />
       <div className="absolute top-80 left-1/3 w-16 h-16 rounded-full bg-green-800/10 blur-lg" />
       <div className="absolute top-40 right-20 w-32 h-32 rounded-full bg-green-800/10 blur-2xl" />
@@ -67,10 +78,10 @@ export default function Hero() {
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-row items-center gap-4 w-full max-w-md"
+          className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md"
           aria-label="Entre na lista de espera"
         >
-          <div className="relative flex-1">
+          <div className="relative w-full sm:flex-1">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg
                 className="w-5 h-5 text-green-100/90"
@@ -98,7 +109,7 @@ export default function Hero() {
           </div>
           <button
             type="submit"
-            className="shrink-0 cursor-pointer rounded-xl bg-[#a2f25c] px-4 py-2 text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors"
+            className="w-full sm:w-auto cursor-pointer rounded-xl bg-[#a2f25c] px-4 py-2 text-[#0a0f0b] font-medium hover:bg-[#b5f57a] transition-colors"
           >
             Entrar na lista VIP
           </button>
@@ -184,7 +195,17 @@ export default function Hero() {
                 className="absolute top-4 right-4 z-10 bg-[#a2f25c] rounded-full p-2 text-[#0a0f0b] hover:bg-[#b5f57a]"
                 aria-label="Fechar formulário"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
